@@ -1,19 +1,43 @@
 /* optional custom styling */
 
-html {
+body {
     background-color: #777d85;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    text-align: center;
+.logo {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
 }
 
-#burger {
-    width: 10rem;
-    height: 2rem;
+.logo img {
+    /* margin: ; */
+    width:20rem;
+    height:20rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .burger-list {
     line-height: 1.6;
+}
+
+.burger-block{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#form-block {
+    text-align: center;
+}
+
+#form-block input {
+    width: 16rem;
+    height: 4rem;
 }

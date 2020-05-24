@@ -15,8 +15,6 @@ $(function () {
                 location.reload();
             }
         );
-
-
     })
 
     // form submission to add new burgers
@@ -42,7 +40,19 @@ $(function () {
         );
     });
 
-
+    $('.delete').on('click', function (event) {
+        event.preventDefault();
+        let id = $(this).data('id')
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE",
+        }).then(
+            function () {
+                console.log("deleted that burger");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    })
 })
 
 
