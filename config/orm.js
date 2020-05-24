@@ -13,9 +13,9 @@ const orm = {
             cb(result);
         });
     },
-    insertOne: (table, colName, name, cb) => {
-        var queryString = "INSERT INTO ?? (?) VALUES (?);";
-        connection.query(queryString, [table, colName, name], function (err, result) {
+    insertOne: (table, colName, val, cb) => {
+        var queryString = "INSERT INTO ?? (??) VALUES (?);";
+        connection.query(queryString, [table, colName, val], function (err, result) {
             if (err) {
                 throw err;
             }

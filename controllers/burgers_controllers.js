@@ -19,10 +19,15 @@ router.get('/', function (req, res) {
 // need to investigate ways to post...
 router.post('/api/burgers', function (req, res) {
     console.log(req.body)
-    // let burgerName = req.body
-    // burger.create(burgerName, function (data) {
-
-    // })
+    let burgerName = req.body.burger_name
+    burger.create(burgerName, function (result) {
+        if (result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            console.log(result.insertId)
+            res.status(200).end();
+        }
+    })
 })
 
 router.put('/api/burgers/:id', function (req, res) {
