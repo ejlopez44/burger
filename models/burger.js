@@ -20,6 +20,11 @@ const burger = {
             cb(res)
         })
     },
+    delete: (id, cb) => {
+        orm.deleteOne("burgers", id, function (res) {
+            cb(res)
+        })
+    },
 }
 
 // Export this file
