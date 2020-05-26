@@ -5,19 +5,21 @@
         <content class="col-sm-8">
             <div class="row">
                 <header>
-                    <div class="col-sm-12">
+                    <div id="header-col" class="col-sm-12">
                         <div class="logo">
                             <img src="/assets/images/hamburger.png" alt="hamburger" />
                         </div>
                         <h1>Eat the Burgers</h1>
                     </div>
                 </header>
+            </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <h2>Burgers!</h2>
                     <div class="burger-list">
                         {{#each burgers}}
                         {{#unless devoured}}
-                        <div class="burger-block">
+                        <div class="burger-row">
                             <h4>{{burger_name}}</h4><button class="devour-it" data-id="{{id}}">Devour it!</button>
                         </div>
                         {{/unless}}
@@ -29,7 +31,7 @@
                     <div class="burger-list">
                         {{#each burgers}}
                         {{#if devoured}}
-                        <div class="burger-block">
+                        <div class="burger-row">
                             <h4>{{burger_name}}</h4><button class="delete" data-id="{{id}}">Clean up</button>
                         </div>
                         {{/if}}
