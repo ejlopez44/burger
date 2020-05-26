@@ -1,5 +1,5 @@
 
-# Eat the Burger
+# Eat the Burgers
 
 ![Burger app photo](https://github.com/ejlopez44/burger/blob/master/public/assets/images/Annotation%202020-05-26%20172558.png)
 
